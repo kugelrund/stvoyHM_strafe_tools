@@ -133,6 +133,8 @@ typedef struct {
 	int			debugLevel;			// if set, diagnostic output will be printed
 	qboolean	noFootsteps;		// if the game is setup for no footsteps by the server
 	qboolean	pModDisintegration;		// true if the Disintegration playerMod is on
+	// additions for strafe_tools
+	qboolean	snapVelocity;
 
 	// results (out)
 	int			numtouch;

@@ -2245,8 +2245,10 @@ void PmoveSingle (pmove_t *pmove) {
 	// entering / leaving water splashes
 	PM_WaterEvents();
 
-	// snap some parts of playerstate to save network bandwidth
-	SnapVector( pm->ps->velocity );
+	if ( pm->snapVelocity ) {
+		// snap some parts of playerstate to save network bandwidth
+		SnapVector( pm->ps->velocity );
+	}
 }
 
 

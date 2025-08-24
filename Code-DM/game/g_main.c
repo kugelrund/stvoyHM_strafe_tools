@@ -85,6 +85,8 @@ vmCvar_t	g_random_skin_limit;
 vmCvar_t	g_noJoinTimeout;
 vmCvar_t	g_classChangeDebounceTime;
 vmCvar_t	ui_playerclass;
+// additions for strafe_tools
+vmCvar_t	g_snapVelocity;
 
 cvarTable_t		gameCvarTable[] = {
 	// don't override the cheat state set by the system
@@ -171,6 +173,9 @@ cvarTable_t		gameCvarTable[] = {
 	{ &g_classChangeDebounceTime, "g_classChangeDebounceTime", "180", CVAR_ARCHIVE, 0, qfalse },
 		
 	{ &ui_playerclass, "ui_playerclass", "", CVAR_ARCHIVE, 0, qfalse },
+
+	// additions for strafe_tools
+	{ &g_snapVelocity, "g_snapVelocity", "1", CVAR_SYSTEMINFO, 0, qfalse },
 
 };
 

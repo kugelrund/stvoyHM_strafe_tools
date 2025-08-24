@@ -47,3 +47,10 @@
 
   Vertical position of the strafe helper.
   Default: `50.0`.
+
+### Strafing Modifications
+
+- `g_snapVelocity` (0 or 1)
+
+  Allows to disable [velocity snapping](velocity_snapping.md).
+  Default: `1`.

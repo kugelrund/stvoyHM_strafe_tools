@@ -791,6 +791,9 @@ extern	vmCvar_t	g_random_skin_limit;
 extern	vmCvar_t	g_noJoinTimeout;
 extern	vmCvar_t	g_classChangeDebounceTime;
 
+// additions for strafe_tools
+extern	vmCvar_t	g_snapVelocity;
+
 void	trap_Printf( const char *fmt );
 void	trap_Error( const char *fmt );
 int		trap_Milliseconds( void );

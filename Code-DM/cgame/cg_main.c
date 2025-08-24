@@ -118,6 +118,7 @@ vmCvar_t	cg_teamOverlayUserinfo;
 vmCvar_t	ui_playerclass;
 
 // additions for strafe helper
+vmCvar_t	cg_snapVelocity;
 vmCvar_t	cg_drawStrafeHelper;
 vmCvar_t	cg_strafeHelperCenter;
 vmCvar_t	cg_strafeHelperCenterMarker;
@@ -205,6 +206,7 @@ cvarTable_t		cvarTable[] = {
 	{ &ui_playerclass, "ui_playerclass", "0", 0 },	// player class
 
 	// additions for strafe helper
+	{ &cg_snapVelocity, "g_snapVelocity", "0", 0 },	// communicated by systeminfo
 	{ &cg_drawStrafeHelper, "cg_drawStrafeHelper", "1", CVAR_ARCHIVE },
 	{ &cg_strafeHelperCenter, "cg_strafeHelperCenter", "1", CVAR_ARCHIVE },
 	{ &cg_strafeHelperCenterMarker, "cg_strafeHelperCenterMarker", "1", CVAR_ARCHIVE },

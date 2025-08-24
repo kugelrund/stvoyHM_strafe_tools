@@ -1204,6 +1204,7 @@ extern	vmCvar_t		cg_predictItems;
 extern	vmCvar_t		cg_deferPlayers;
 
 // additions for strafe helper
+extern	vmCvar_t		cg_snapVelocity;
 extern	vmCvar_t		cg_drawStrafeHelper;
 extern	vmCvar_t		cg_strafeHelperCenter;
 extern	vmCvar_t		cg_strafeHelperCenterMarker;

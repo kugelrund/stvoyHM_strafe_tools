@@ -501,6 +501,8 @@ void CG_PredictPlayerState( void ) {
 	cg_pmove.noFootsteps = ( cgs.dmflags & DF_NO_FOOTSTEPS ) > 0;
 	cg_pmove.pModDisintegration = cgs.pModDisintegration > 0;
 
+	cg_pmove.snapVelocity = cg_snapVelocity.integer > 0;
+
 	// save the state before the pmove so we can detect transitions
 	oldPlayerState = cg.predictedPlayerState;
 
