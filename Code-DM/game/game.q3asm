@@ -1,4 +1,4 @@
--o "\stvoy\baseef\vm\qagame"
+-o "qagame"
 g_main
 ..\g_syscalls
 bg_misc

@@ -1,4 +1,4 @@
--o "\stvoy\baseef\vm\ui"
+-o "ui"
 ui_main
 ..\ui_syscalls
 ui_gameinfo
