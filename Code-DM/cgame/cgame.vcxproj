@@ -151,10 +151,16 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\game\bg_misc.c" />
-    <ClCompile Include="..\game\bg_pmove.c" />
+    <ClCompile Include="..\game\bg_pmove.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WIN32;_DEBUG;_WINDOWS;STRAFE_HELPER_IS_CGAME_COMPILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">WIN32;NDEBUG;_WINDOWS;STRAFE_HELPER_IS_CGAME_COMPILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="..\game\bg_slidemove.c" />
     <ClCompile Include="..\game\q_math.c" />
     <ClCompile Include="..\game\q_shared.c" />
+    <ClCompile Include="..\strafe_tools\strafe_helper\strafe_helper.c" />
+    <ClCompile Include="..\strafe_tools\strafe_helper_customization.c" />
+    <ClCompile Include="..\strafe_tools\strafe_helper_includes.c" />
     <ClCompile Include="cg_consolecmds.c" />
     <ClCompile Include="cg_draw.c" />
     <ClCompile Include="cg_drawtools.c" />
@@ -196,6 +202,9 @@
     <ClInclude Include="..\game\bg_public.h" />
     <ClInclude Include="..\game\q_shared.h" />
     <ClInclude Include="..\game\surfaceflags.h" />
+    <ClInclude Include="..\strafe_tools\strafe_helper\strafe_helper.h" />
+    <ClInclude Include="..\strafe_tools\strafe_helper\strafe_helper_customization.h" />
+    <ClInclude Include="..\strafe_tools\strafe_helper_includes.h" />
     <ClInclude Include="cg_local.h" />
     <ClInclude Include="cg_public.h" />
     <ClInclude Include="cg_screenfx.h" />

@@ -6,6 +6,7 @@
 #include "cg_local.h"
 #include "cg_text.h"
 #include "cg_screenfx.h"
+#include "../strafe_tools/strafe_helper/strafe_helper.h"
 
 // set in CG_ParseTeamInfo
 int sortedTeamPlayers[TEAM_MAXOVERLAY];
@@ -2607,6 +2608,25 @@ static void CG_DrawZoomMask( void )
 	}
 }
 
+/*
+====================
+CG_DrawStrafeHelper
+====================
+*/
+static void CG_DrawStrafeHelper(void)
+{
+	struct StrafeHelperParams params;
+	params.center = cg_strafeHelperCenter.integer;
+	params.center_marker = cg_strafeHelperCenterMarker.integer;
+	params.scale = cg_strafeHelperScale.value;
+	params.height = cg_strafeHelperHeight.value;
+	params.y = cg_strafeHelperY.value;
+	params.speed_scale = cg_strafeHelperSpeedScale.integer;
+	params.speed_x = 0.0f;
+	params.speed_y = cg_strafeHelperSpeedY.value;
+	StrafeHelper_Draw(&params, SCREEN_WIDTH, SCREEN_HEIGHT);
+}
+
 //==================================================================================
 
 /*
@@ -2645,6 +2665,10 @@ static void CG_Draw2D( void ) {
 	} else {
 		// don't draw any status if dead
 		if ( cg.snap->ps.stats[STAT_HEALTH] > 0 ) {
+			if ( cg_drawStrafeHelper.integer ) {
+				CG_DrawStrafeHelper();
+			}
+
 			CG_DrawStatusBar();
 			CG_DrawAmmoWarning();
 			CG_DrawCrosshair();

@@ -6,6 +6,9 @@
 #include "q_shared.h"
 #include "bg_public.h"
 #include "bg_local.h"
+#ifdef STRAFE_HELPER_IS_CGAME_COMPILE
+#include "../strafe_tools/strafe_helper/strafe_helper.h"
+#endif
 
 pmove_t		*pm;
 pml_t		pml;
@@ -256,6 +259,10 @@ static void PM_Accelerate( vec3_t wishdir, float wishspeed, float accel ) {
 	// q2 style
 	int			i;
 	float		addspeed, accelspeed, currentspeed;
+
+#ifdef STRAFE_HELPER_IS_CGAME_COMPILE
+	StrafeHelper_SetAccelerationValues(pm->ps->velocity, wishdir, wishspeed, accel, pml.frametime);
+#endif
 
 	currentspeed = DotProduct (pm->ps->velocity, wishdir);
 	addspeed = wishspeed - currentspeed;

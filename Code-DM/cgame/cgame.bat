@@ -6,7 +6,7 @@ echo Creating the CGAME ASM files...
 echo.
 ..\..\..\bin_nt\lcc -DQ3_VM -S -Wf-target=bytecode -Wf-g -I..\..\cgame -I..\..\game -I..\..\ui %1 ../../game/bg_misc.c
 @if errorlevel 1 goto quit
-..\..\..\bin_nt\lcc -DQ3_VM -S -Wf-target=bytecode -Wf-g -I..\..\cgame -I..\..\game -I..\..\ui %1 ../../game/bg_pmove.c
+..\..\..\bin_nt\lcc -DQ3_VM -DSTRAFE_HELPER_IS_CGAME_COMPILE -S -Wf-target=bytecode -Wf-g -I..\..\cgame -I..\..\game -I..\..\ui %1 ../../game/bg_pmove.c
 @if errorlevel 1 goto quit
 ..\..\..\bin_nt\lcc -DQ3_VM -S -Wf-target=bytecode -Wf-g -I..\..\cgame -I..\..\game -I..\..\ui %1 ../../game/bg_slidemove.c
 @if errorlevel 1 goto quit
@@ -83,6 +83,13 @@ echo.
 ..\..\..\bin_nt\lcc -DQ3_VM -S -Wf-target=bytecode -Wf-g -I..\..\cgame -I..\..\game -I..\..\ui %1 ../fx_dreadnought.c
 @if errorlevel 1 goto quit
 ..\..\..\bin_nt\lcc -DQ3_VM -S -Wf-target=bytecode -Wf-g -I..\..\cgame -I..\..\game -I..\..\ui %1 ../fx_borg.c
+@if errorlevel 1 goto quit
+..\..\..\bin_nt\lcc -DQ3_VM -S -Wf-target=bytecode -Wf-g -I..\..\cgame -I..\..\game -I..\..\ui %1 ../../strafe_tools/strafe_helper/strafe_helper.c
+@if errorlevel 1 goto quit
+..\..\..\bin_nt\lcc -DQ3_VM -S -Wf-target=bytecode -Wf-g -I..\..\cgame -I..\..\game -I..\..\ui %1 ../../strafe_tools/strafe_helper_customization.c
+@if errorlevel 1 goto quit
+..\..\..\bin_nt\lcc -DQ3_VM -S -Wf-target=bytecode -Wf-g -I..\..\cgame -I..\..\game -I..\..\ui %1 ../../strafe_tools/strafe_helper_includes.c
+
 @if errorlevel 1 goto quit
 
 if not exist ..\..\..\bin_nt\q3asm.exe goto noq3asm

@@ -40,3 +40,6 @@ fx_stasis
 fx_item
 fx_dreadnought
 fx_borg
+strafe_helper
+strafe_helper_customization
+strafe_helper_includes

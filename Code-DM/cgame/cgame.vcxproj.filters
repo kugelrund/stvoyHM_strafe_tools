@@ -9,6 +9,12 @@
       <UniqueIdentifier>{000ae69c-074b-4936-a922-a0e1c0fcd26b}</UniqueIdentifier>
       <Extensions>h</Extensions>
     </Filter>
+    <Filter Include="strafe_tools">
+      <UniqueIdentifier>{518b9e38-ba77-4c0c-b424-163fb97cfa41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="strafe_tools\strafe_helper">
+      <UniqueIdentifier>{275d4085-2b29-4fdd-800f-a8bb46b6424d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\game\bg_lib.c">
@@ -134,6 +140,15 @@
     <ClCompile Include="..\game\q_shared.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\strafe_tools\strafe_helper\strafe_helper.c">
+      <Filter>strafe_tools\strafe_helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\strafe_tools\strafe_helper_includes.c">
+      <Filter>strafe_tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\strafe_tools\strafe_helper_customization.c">
+      <Filter>strafe_tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\game\bg_local.h">
@@ -165,6 +180,15 @@
     </ClInclude>
     <ClInclude Include="tr_types.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\strafe_tools\strafe_helper\strafe_helper.h">
+      <Filter>strafe_tools\strafe_helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\strafe_tools\strafe_helper_includes.h">
+      <Filter>strafe_tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\strafe_tools\strafe_helper\strafe_helper_customization.h">
+      <Filter>strafe_tools\strafe_helper</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
