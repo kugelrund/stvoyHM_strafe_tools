@@ -2,7 +2,7 @@
 if not exist vm\nul mkdir vm
 cd vm
 if not exist ..\..\..\bin_nt\lcc.exe goto nolcc
-echo"Creating the GAME ASM files...
+echo Creating the GAME ASM files...
 echo. 
 ..\..\..\bin_nt\lcc -DQ3_VM -S -Wf-target=bytecode -Wf-g -I..\..\cgame -I..\..\game -I..\..\ui %1 ../g_main.c
 @if errorlevel 1 goto quit
@@ -86,20 +86,20 @@ echo.
 @if errorlevel 1 goto quit
 
 if not exist ..\..\..\bin_nt\q3asm.exe goto noq3asm
-echo"Creating the GAME.QVM file...
+echo Creating the GAME.QVM file...
 echo.
 ..\..\..\bin_nt\q3asm -f ../game
 goto done
 :noq3asm
-echo"ERROR:  Q3ASM.EXE was not found in the ..\..\..\bin_nt subdirectory.
+echo ERROR:  Q3ASM.EXE was not found in the ..\..\..\bin_nt subdirectory.
 exit
 goto done
 :nolcc
-echo"ERROR:  LCC.EXE was not found in the ..\..\..\bin_nt subdirectory.
+echo ERROR:  LCC.EXE was not found in the ..\..\..\bin_nt subdirectory.
 exit
 goto done
 :quit
-echo"Error building the GAME ASM files with LCC.EXE!
+echo Error building the GAME ASM files with LCC.EXE!
 exit
 :done
 echo.

@@ -7,6 +7,6 @@ if exist cgame.bat call cgame
 cd ..\ui
 if exist ui.bat call ui
 cd ..
-echo"Finished.
+echo Finished.
 echo.
 exit
