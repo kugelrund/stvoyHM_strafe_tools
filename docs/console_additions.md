@@ -1,9 +1,9 @@
 
 # Console Additions
 
-## Variables
+## Strafe Helper
 
-### Strafe Helper
+### Variables
 
 - `cg_drawStrafeHelper` (0 or 1)
 
@@ -48,7 +48,20 @@
   Vertical position of the strafe helper.
   Default: `50.0`.
 
-### Strafing Modifications
+## Strafing Modifications
+
+### Commands
+
+- `setacceleration <holomatch|singleplayer>`
+
+  Sets all acceleration modification cvars to the defaults of Holomatch or Singleplayer.
+  Note that movement is also influenced by other variables such as framerates and velocity snapping, which are left untouched by this command.
+
+  To get the same velocity snapping as in singleplayer, `pmove_velocitySnapping` must be `1` and `vm_game` must be `1`.
+  If this mod is compiled and provided as native DLL, `vm_game` can also be `0`.
+  For more details see [velocity_snapping.md](velocity_snapping.md).
+
+### Variables
 
 - `pmove_accelerate` (#)
 

@@ -1642,6 +1642,44 @@ void Cmd_SetViewpos_f( gentity_t *ent ) {
 
 /*
 =================
+Cmd_SetAcceleration
+=================
+*/
+void Cmd_SetAcceleration_f( gentity_t *ent ) {
+	vec3_t		origin, angles;
+	char		buffer[64];
+	int			i;
+
+	if ( trap_Argc() == 2 ) {
+
+		trap_Argv( 1, buffer, sizeof(buffer) );
+
+		if ( Q_stricmp( buffer, "holomatch" ) == 0 ) {
+
+			trap_Cvar_Set( "pmove_accelerate", "10" );
+			trap_Cvar_Set( "pmove_airAccelerate", "1" );
+			trap_Cvar_Set( "pmove_airDecelRate", "1" );
+			trap_Cvar_Set( "pmove_jumpVelocity", "270" );
+			trap_Cvar_Set( "pmove_airCmdScaling", "1" );
+			return;
+
+		} else if ( Q_stricmp( buffer, "singleplayer" ) == 0 ) {
+
+			trap_Cvar_Set( "pmove_accelerate", "12" );
+			trap_Cvar_Set( "pmove_airAccelerate", "4" );
+			trap_Cvar_Set( "pmove_airDecelRate", "1.35" );
+			trap_Cvar_Set( "pmove_jumpVelocity", "225" );
+			trap_Cvar_Set( "pmove_airCmdScaling", "0" );
+			return;
+		}
+	}
+
+	trap_SendServerCommand( ent-g_entities, va("print \"usage: setacceleration <holomatch|singleplayer>\n\""));
+}
+
+
+/*
+=================
 ClientCommand
 =================
 */
@@ -1717,6 +1755,9 @@ void ClientCommand( int clientNum ) {
 		Cmd_GameCommand_f( ent );
 	else if (Q_stricmp (cmd, "setviewpos") == 0)
 		Cmd_SetViewpos_f( ent );
+	// additions for strafe_tools
+	else if (Q_stricmp (cmd, "setacceleration") == 0)
+		Cmd_SetAcceleration_f( ent );
 	else
 		trap_SendServerCommand( clientNum, va("print \"unknown cmd %s\n\"", cmd ) );
 }
