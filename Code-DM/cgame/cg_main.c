@@ -118,7 +118,6 @@ vmCvar_t	cg_teamOverlayUserinfo;
 vmCvar_t	ui_playerclass;
 
 // additions for strafe helper
-vmCvar_t	cg_snapVelocity;
 vmCvar_t	cg_drawStrafeHelper;
 vmCvar_t	cg_strafeHelperCenter;
 vmCvar_t	cg_strafeHelperCenterMarker;
@@ -127,6 +126,7 @@ vmCvar_t	cg_strafeHelperScale;
 vmCvar_t	cg_strafeHelperSpeedScale;
 vmCvar_t	cg_strafeHelperSpeedY;
 vmCvar_t	cg_strafeHelperY;
+vmCvar_t	pmove_velocitySnapping;
 
 typedef struct {
 	vmCvar_t	*vmCvar;
@@ -206,7 +206,6 @@ cvarTable_t		cvarTable[] = {
 	{ &ui_playerclass, "ui_playerclass", "0", 0 },	// player class
 
 	// additions for strafe helper
-	{ &cg_snapVelocity, "g_snapVelocity", "0", 0 },	// communicated by systeminfo
 	{ &cg_drawStrafeHelper, "cg_drawStrafeHelper", "1", CVAR_ARCHIVE },
 	{ &cg_strafeHelperCenter, "cg_strafeHelperCenter", "1", CVAR_ARCHIVE },
 	{ &cg_strafeHelperCenterMarker, "cg_strafeHelperCenterMarker", "1", CVAR_ARCHIVE },
@@ -215,6 +214,7 @@ cvarTable_t		cvarTable[] = {
 	{ &cg_strafeHelperSpeedScale, "cg_strafeHelperSpeedScale", "2", CVAR_ARCHIVE },
 	{ &cg_strafeHelperSpeedY, "cg_strafeHelperSpeedY", "5", CVAR_ARCHIVE },
 	{ &cg_strafeHelperY, "cg_strafeHelperY", "50", CVAR_ARCHIVE },
+	{ &pmove_velocitySnapping, "pmove_velocitySnapping", "1", 0 },	// communicated by systeminfo
 };
 
 int		cvarTableSize = sizeof( cvarTable ) / sizeof( cvarTable[0] );

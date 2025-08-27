@@ -1758,7 +1758,7 @@ void ClientThink_real( gentity_t *ent ) {
 	pm.noFootsteps = ( g_dmflags.integer & DF_NO_FOOTSTEPS ) > 0;
 	pm.pModDisintegration = g_pModDisintegration.integer > 0;
 
-	pm.snapVelocity = g_snapVelocity.integer > 0;
+	pm.velocitySnapping = pmove_velocitySnapping.integer > 0;
 
 	VectorCopy( client->ps.origin, oldOrigin );
 

@@ -50,7 +50,7 @@
 
 ### Strafing Modifications
 
-- `g_snapVelocity` (0 or 1)
+- `pmove_velocitySnapping` (0 or 1)
 
-  Allows to disable [velocity snapping](velocity_snapping.md).
+  Allows to enable or disable [velocity snapping](velocity_snapping.md).
   Default: `1`.
