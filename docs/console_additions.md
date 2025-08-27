@@ -50,6 +50,18 @@
 
 ### Strafing Modifications
 
+- `pmove_accelerate` (#)
+
+  Acceleration factor while on ground.
+  Singleplayer uses `12.0`.
+  Default: `10.0`.
+
+- `pmove_airAccelerate` (#)
+
+  Acceleration factor while in air.
+  Singleplayer uses `4.0`.
+  Default: `1.0`.
+
 - `pmove_jumpVelocity` (#)
 
   Initial vertical velocity when jumping.

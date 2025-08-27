@@ -19,8 +19,6 @@ const float	pm_duckScale = 0.50;
 const float	pm_swimScale = 0.50;
 const float	pm_ladderScale = 0.7f;
 
-const float	pm_accelerate = 10;
-const float	pm_airaccelerate = 1;
 const float	pm_wateraccelerate = 4;
 const float	pm_flyaccelerate = 8;
 
@@ -666,11 +664,11 @@ static void PM_AirMove( void ) {
 	// not on ground, so little effect on velocity
 	if ( pm->ps->persistant[PERS_CLASS] == PC_INFILTRATOR )
 	{//INFILTRATORs have more air control
-		PM_Accelerate (wishdir, wishspeed, pm_airaccelerate*2);
+		PM_Accelerate (wishdir, wishspeed, pm->airaccelerate*2);
 	}
 	else
 	{
-		PM_Accelerate (wishdir, wishspeed, pm_airaccelerate);
+		PM_Accelerate (wishdir, wishspeed, pm->airaccelerate);
 	}
 
 	// we may have a ground plane that is very steep, even
@@ -771,9 +769,9 @@ static void PM_WalkMove( void ) {
 	// when a player gets hit, they temporarily lose
 	// full control, which allows them to be moved a bit
 	if ( ( pml.groundTrace.surfaceFlags & SURF_SLICK ) || pm->ps->pm_flags & PMF_TIME_KNOCKBACK ) {
-		accelerate = pm_airaccelerate;
+		accelerate = pm->airaccelerate;
 	} else {
-		accelerate = pm_accelerate;
+		accelerate = pm->accelerate;
 	}
 
 	PM_Accelerate (wishdir, wishspeed, accelerate);
@@ -889,7 +887,7 @@ static void PM_NoclipMove( void ) {
 	wishspeed = VectorNormalize(wishdir);
 	wishspeed *= scale;
 
-	PM_Accelerate( wishdir, wishspeed, pm_accelerate );
+	PM_Accelerate( wishdir, wishspeed, pm->accelerate );
 
 	// move
 	VectorMA (pm->ps->origin, pml.frametime, pm->ps->velocity, pm->ps->origin);

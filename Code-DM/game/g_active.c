@@ -1758,6 +1758,8 @@ void ClientThink_real( gentity_t *ent ) {
 	pm.noFootsteps = ( g_dmflags.integer & DF_NO_FOOTSTEPS ) > 0;
 	pm.pModDisintegration = g_pModDisintegration.integer > 0;
 
+	pm.accelerate = pmove_accelerate.value;
+	pm.airaccelerate = pmove_airAccelerate.value;
 	pm.jumpVelocity = pmove_jumpVelocity.value;
 	pm.velocitySnapping = pmove_velocitySnapping.integer > 0;
 

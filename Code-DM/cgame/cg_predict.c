@@ -501,6 +501,8 @@ void CG_PredictPlayerState( void ) {
 	cg_pmove.noFootsteps = ( cgs.dmflags & DF_NO_FOOTSTEPS ) > 0;
 	cg_pmove.pModDisintegration = cgs.pModDisintegration > 0;
 
+	cg_pmove.accelerate = pmove_accelerate.value;
+	cg_pmove.airaccelerate = pmove_airAccelerate.value;
 	cg_pmove.jumpVelocity = pmove_jumpVelocity.value;
 	cg_pmove.velocitySnapping = pmove_velocitySnapping.integer > 0;
 
