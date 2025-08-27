@@ -792,6 +792,7 @@ extern	vmCvar_t	g_noJoinTimeout;
 extern	vmCvar_t	g_classChangeDebounceTime;
 
 // additions for strafe_tools
+extern	vmCvar_t	pmove_jumpVelocity;
 extern	vmCvar_t	pmove_velocitySnapping;
 
 void	trap_Printf( const char *fmt );

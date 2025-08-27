@@ -126,6 +126,7 @@ vmCvar_t	cg_strafeHelperScale;
 vmCvar_t	cg_strafeHelperSpeedScale;
 vmCvar_t	cg_strafeHelperSpeedY;
 vmCvar_t	cg_strafeHelperY;
+vmCvar_t	pmove_jumpVelocity;
 vmCvar_t	pmove_velocitySnapping;
 
 typedef struct {
@@ -214,6 +215,7 @@ cvarTable_t		cvarTable[] = {
 	{ &cg_strafeHelperSpeedScale, "cg_strafeHelperSpeedScale", "2", CVAR_ARCHIVE },
 	{ &cg_strafeHelperSpeedY, "cg_strafeHelperSpeedY", "5", CVAR_ARCHIVE },
 	{ &cg_strafeHelperY, "cg_strafeHelperY", "50", CVAR_ARCHIVE },
+	{ &pmove_jumpVelocity, "pmove_jumpVelocity", "270", 0 },	// communicated by systeminfo
 	{ &pmove_velocitySnapping, "pmove_velocitySnapping", "1", 0 },	// communicated by systeminfo
 };
 

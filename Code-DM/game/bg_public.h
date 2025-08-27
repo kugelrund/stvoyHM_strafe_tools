@@ -134,6 +134,7 @@ typedef struct {
 	qboolean	noFootsteps;		// if the game is setup for no footsteps by the server
 	qboolean	pModDisintegration;		// true if the Disintegration playerMod is on
 	// additions for strafe_tools
+	float		jumpVelocity;
 	qboolean	velocitySnapping;
 
 	// results (out)

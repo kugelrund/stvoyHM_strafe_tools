@@ -6,8 +6,6 @@
 
 #define	STEPSIZE		18
 
-#define	JUMP_VELOCITY	270
-
 #define	TIMER_LAND		130
 #define	TIMER_GESTURE	(34*66+50)
 

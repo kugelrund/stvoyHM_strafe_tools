@@ -401,11 +401,11 @@ static qboolean PM_CheckJump( void ) {
 	pm->ps->groundEntityNum = ENTITYNUM_NONE;
 	if ( pm->ps->persistant[PERS_CLASS] == PC_INFILTRATOR )
 	{//INFILTRATORs jump twice as high
-		pm->ps->velocity[2] = JUMP_VELOCITY*2;
+		pm->ps->velocity[2] = pm->jumpVelocity*2;
 	}
 	else
 	{
-		pm->ps->velocity[2] = JUMP_VELOCITY;
+		pm->ps->velocity[2] = pm->jumpVelocity;
 	}
 	PM_AddEvent( EV_JUMP );
 

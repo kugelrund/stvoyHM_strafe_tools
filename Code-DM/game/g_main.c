@@ -86,6 +86,7 @@ vmCvar_t	g_noJoinTimeout;
 vmCvar_t	g_classChangeDebounceTime;
 vmCvar_t	ui_playerclass;
 // additions for strafe_tools
+vmCvar_t	pmove_jumpVelocity;
 vmCvar_t	pmove_velocitySnapping;
 
 cvarTable_t		gameCvarTable[] = {
@@ -175,6 +176,7 @@ cvarTable_t		gameCvarTable[] = {
 	{ &ui_playerclass, "ui_playerclass", "", CVAR_ARCHIVE, 0, qfalse },
 
 	// additions for strafe_tools
+	{ &pmove_jumpVelocity, "pmove_jumpVelocity", "270", CVAR_SYSTEMINFO, 0, qfalse },
 	{ &pmove_velocitySnapping, "pmove_velocitySnapping", "1", CVAR_SYSTEMINFO, 0, qfalse },
 
 };

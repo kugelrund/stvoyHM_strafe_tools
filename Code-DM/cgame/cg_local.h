@@ -1212,6 +1212,7 @@ extern	vmCvar_t		cg_strafeHelperScale;
 extern	vmCvar_t		cg_strafeHelperSpeedScale;
 extern	vmCvar_t		cg_strafeHelperSpeedY;
 extern	vmCvar_t		cg_strafeHelperY;
+extern	vmCvar_t		pmove_jumpVelocity;
 extern	vmCvar_t		pmove_velocitySnapping;
 
 //

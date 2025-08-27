@@ -50,6 +50,12 @@
 
 ### Strafing Modifications
 
+- `pmove_jumpVelocity` (#)
+
+  Initial vertical velocity when jumping.
+  Singleplayer uses `225.0`.
+  Default: `270.0`.
+
 - `pmove_velocitySnapping` (0 or 1)
 
   Allows to enable or disable [velocity snapping](velocity_snapping.md).
