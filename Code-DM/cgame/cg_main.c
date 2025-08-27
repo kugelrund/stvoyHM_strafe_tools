@@ -130,6 +130,7 @@ vmCvar_t	pmove_accelerate;
 vmCvar_t	pmove_airAccelerate;
 vmCvar_t	pmove_airDecelRate;
 vmCvar_t	pmove_jumpVelocity;
+vmCvar_t	pmove_airCmdScaling;
 vmCvar_t	pmove_velocitySnapping;
 
 typedef struct {
@@ -222,6 +223,7 @@ cvarTable_t		cvarTable[] = {
 	{ &pmove_airAccelerate, "pmove_airAccelerate", "1", 0 },	// communicated by systeminfo
 	{ &pmove_airDecelRate, "pmove_airDecelRate", "1", 0 },	// communicated by systeminfo
 	{ &pmove_jumpVelocity, "pmove_jumpVelocity", "270", 0 },	// communicated by systeminfo
+	{ &pmove_airCmdScaling, "pmove_airCmdScaling", "1", 0 },	// communicated by systeminfo
 	{ &pmove_velocitySnapping, "pmove_velocitySnapping", "1", 0 },	// communicated by systeminfo
 };
 

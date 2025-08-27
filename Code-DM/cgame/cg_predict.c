@@ -505,6 +505,7 @@ void CG_PredictPlayerState( void ) {
 	cg_pmove.airaccelerate = pmove_airAccelerate.value;
 	cg_pmove.airDecelRate = pmove_airDecelRate.value;
 	cg_pmove.jumpVelocity = pmove_jumpVelocity.value;
+	cg_pmove.airCmdScaling = pmove_airCmdScaling.integer > 0;
 	cg_pmove.velocitySnapping = pmove_velocitySnapping.integer > 0;
 
 	// save the state before the pmove so we can detect transitions

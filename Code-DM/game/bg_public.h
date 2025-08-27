@@ -138,6 +138,7 @@ typedef struct {
 	float		airaccelerate;
 	float		airDecelRate;
 	float		jumpVelocity;
+	qboolean	airCmdScaling;
 	qboolean	velocitySnapping;
 
 	// results (out)

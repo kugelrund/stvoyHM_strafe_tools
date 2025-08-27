@@ -1762,6 +1762,7 @@ void ClientThink_real( gentity_t *ent ) {
 	pm.airaccelerate = pmove_airAccelerate.value;
 	pm.airDecelRate = pmove_airDecelRate.value;
 	pm.jumpVelocity = pmove_jumpVelocity.value;
+	pm.airCmdScaling = pmove_airCmdScaling.integer > 0;
 	pm.velocitySnapping = pmove_velocitySnapping.integer > 0;
 
 	VectorCopy( client->ps.origin, oldOrigin );

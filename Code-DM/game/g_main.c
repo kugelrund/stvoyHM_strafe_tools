@@ -90,6 +90,7 @@ vmCvar_t	pmove_accelerate;
 vmCvar_t	pmove_airAccelerate;
 vmCvar_t	pmove_airDecelRate;
 vmCvar_t	pmove_jumpVelocity;
+vmCvar_t	pmove_airCmdScaling;
 vmCvar_t	pmove_velocitySnapping;
 
 cvarTable_t		gameCvarTable[] = {
@@ -183,6 +184,7 @@ cvarTable_t		gameCvarTable[] = {
 	{ &pmove_airAccelerate, "pmove_airAccelerate", "1", CVAR_SYSTEMINFO, 0, qfalse },
 	{ &pmove_airDecelRate, "pmove_airDecelRate", "1", CVAR_SYSTEMINFO, 0, qfalse },
 	{ &pmove_jumpVelocity, "pmove_jumpVelocity", "270", CVAR_SYSTEMINFO, 0, qfalse },
+	{ &pmove_airCmdScaling, "pmove_airCmdScaling", "1", CVAR_SYSTEMINFO, 0, qfalse },
 	{ &pmove_velocitySnapping, "pmove_velocitySnapping", "1", CVAR_SYSTEMINFO, 0, qfalse },
 
 };

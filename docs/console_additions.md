@@ -74,6 +74,13 @@
   Singleplayer uses `225.0`.
   Default: `270.0`.
 
+- `pmove_airCmdScaling` (0 or 1)
+
+  Allows to enable or disable scaling of wishspeed with the scale of the user input cmd while in the air.
+  When this scaling is enabled, acceleration in air is decreased while jump is being held.
+  Singleplayer uses `0`.
+  Default: `1`.
+
 - `pmove_velocitySnapping` (0 or 1)
 
   Allows to enable or disable [velocity snapping](velocity_snapping.md).

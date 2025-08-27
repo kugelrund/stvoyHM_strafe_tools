@@ -796,6 +796,7 @@ extern	vmCvar_t	pmove_accelerate;
 extern	vmCvar_t	pmove_airAccelerate;
 extern	vmCvar_t	pmove_airDecelRate;
 extern	vmCvar_t	pmove_jumpVelocity;
+extern	vmCvar_t	pmove_airCmdScaling;
 extern	vmCvar_t	pmove_velocitySnapping;
 
 void	trap_Printf( const char *fmt );

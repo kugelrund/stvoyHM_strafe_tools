@@ -659,7 +659,9 @@ static void PM_AirMove( void ) {
 
 	VectorCopy (wishvel, wishdir);
 	wishspeed = VectorNormalize(wishdir);
-	wishspeed *= scale;
+	if ( pm->airCmdScaling ) {
+		wishspeed *= scale;
+	}
 
 	if ( ( DotProduct (pm->ps->velocity, wishdir) ) < 0.0f )
 	{//Encourage deceleration away from the current velocity
