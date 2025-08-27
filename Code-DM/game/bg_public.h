@@ -136,6 +136,7 @@ typedef struct {
 	// additions for strafe_tools
 	float		accelerate;
 	float		airaccelerate;
+	float		airDecelRate;
 	float		jumpVelocity;
 	qboolean	velocitySnapping;
 

@@ -88,6 +88,7 @@ vmCvar_t	ui_playerclass;
 // additions for strafe_tools
 vmCvar_t	pmove_accelerate;
 vmCvar_t	pmove_airAccelerate;
+vmCvar_t	pmove_airDecelRate;
 vmCvar_t	pmove_jumpVelocity;
 vmCvar_t	pmove_velocitySnapping;
 
@@ -180,6 +181,7 @@ cvarTable_t		gameCvarTable[] = {
 	// additions for strafe_tools
 	{ &pmove_accelerate, "pmove_accelerate", "10", CVAR_SYSTEMINFO, 0, qfalse },
 	{ &pmove_airAccelerate, "pmove_airAccelerate", "1", CVAR_SYSTEMINFO, 0, qfalse },
+	{ &pmove_airDecelRate, "pmove_airDecelRate", "1", CVAR_SYSTEMINFO, 0, qfalse },
 	{ &pmove_jumpVelocity, "pmove_jumpVelocity", "270", CVAR_SYSTEMINFO, 0, qfalse },
 	{ &pmove_velocitySnapping, "pmove_velocitySnapping", "1", CVAR_SYSTEMINFO, 0, qfalse },
 

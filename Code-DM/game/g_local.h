@@ -794,6 +794,7 @@ extern	vmCvar_t	g_classChangeDebounceTime;
 // additions for strafe_tools
 extern	vmCvar_t	pmove_accelerate;
 extern	vmCvar_t	pmove_airAccelerate;
+extern	vmCvar_t	pmove_airDecelRate;
 extern	vmCvar_t	pmove_jumpVelocity;
 extern	vmCvar_t	pmove_velocitySnapping;
 

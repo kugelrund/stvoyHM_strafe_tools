@@ -1760,6 +1760,7 @@ void ClientThink_real( gentity_t *ent ) {
 
 	pm.accelerate = pmove_accelerate.value;
 	pm.airaccelerate = pmove_airAccelerate.value;
+	pm.airDecelRate = pmove_airDecelRate.value;
 	pm.jumpVelocity = pmove_jumpVelocity.value;
 	pm.velocitySnapping = pmove_velocitySnapping.integer > 0;
 

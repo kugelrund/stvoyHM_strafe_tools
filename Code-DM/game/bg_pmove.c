@@ -661,6 +661,11 @@ static void PM_AirMove( void ) {
 	wishspeed = VectorNormalize(wishdir);
 	wishspeed *= scale;
 
+	if ( ( DotProduct (pm->ps->velocity, wishdir) ) < 0.0f )
+	{//Encourage deceleration away from the current velocity
+		wishspeed *= pm->airDecelRate;
+	}
+
 	// not on ground, so little effect on velocity
 	if ( pm->ps->persistant[PERS_CLASS] == PC_INFILTRATOR )
 	{//INFILTRATORs have more air control
