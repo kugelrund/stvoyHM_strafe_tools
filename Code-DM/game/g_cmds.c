@@ -1646,9 +1646,7 @@ Cmd_SetAcceleration
 =================
 */
 void Cmd_SetAcceleration_f( gentity_t *ent ) {
-	vec3_t		origin, angles;
 	char		buffer[64];
-	int			i;
 
 	if ( trap_Argc() == 2 ) {
 
