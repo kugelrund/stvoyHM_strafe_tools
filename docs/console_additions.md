@@ -31,12 +31,12 @@
   Angles correspond directly to the field of view if this scale is set to `360/cg_fov`.
   Default: `4.0`.
 
-- `cg_strafeHelperSpeedScale` (#)
+- `cg_strafeHelperSpeedScale` (0, 1, 2 or 3)
 
   Scale of the text for speed display tied to strafe helper.
   Note that this shows the speed after friction but prior to acceleration, as this is what is relevant for optimal strafing.
   It is not the intuitive current player speed.
-  Default: `0.9`.
+  Default: `2`.
 
 - `cg_strafeHelperSpeedY` (#)
 
