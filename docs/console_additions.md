@@ -77,7 +77,7 @@ Variables:
 
 - `pmove_airDecelRate` (#)
 
-  Extra acceleration factor when moving accelerating away from current movement direction while in air.
+  Extra acceleration factor when accelerating away from current movement direction while in air.
   Singleplayer uses `1.35`.
   Default: `1.0` (no effect).
 
