@@ -3,7 +3,7 @@
 
 ## Strafe Helper
 
-### Variables
+Variables:
 
 - `cg_drawStrafeHelper` (0 or 1)
 
@@ -50,7 +50,7 @@
 
 ## Strafing Modifications
 
-### Commands
+Commands:
 
 - `setacceleration <holomatch|singleplayer>`
 
@@ -61,7 +61,7 @@
   If this mod is compiled and provided as native DLL, `vm_game` can also be `0`.
   For more details see [velocity_snapping.md](velocity_snapping.md).
 
-### Variables
+Variables:
 
 - `pmove_accelerate` (#)
 
