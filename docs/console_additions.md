@@ -90,8 +90,8 @@ Variables:
 - `pmove_airCmdScaling` (0 or 1)
 
   Allows to enable or disable scaling of wishspeed with the scale of the user input cmd while in the air.
-  When this scaling is enabled, acceleration in air is decreased while jump is being held.
-  Singleplayer uses `0`.
+  When this scaling is enabled, half-beat strafing is competitive with normal strafing but acceleration in air is decreased while jump is being held.
+  Singleplayer uses `0` (see [kugelrund/Elite-Reinforce/docs/movekey_air_accel_effect.md](https://github.com/kugelrund/Elite-Reinforce/blob/master/docs/movement_physics/movekey_air_accel_effect.md)).
   Default: `1`.
 
 - `pmove_velocitySnapping` (0 or 1)
